@@ -25,6 +25,11 @@
     <%= f.text_area :content %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+	<% if params[:action] == 'new'%>
+    <%= submit_tag "Create Post", :class=>"button" %>
+	<%else%>
+		<%= submit_tag "Update Post", :class=>"button" %>
+	<%end%>
+
   </div>
 <% end %>

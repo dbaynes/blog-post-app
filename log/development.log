@@ -3528,3 +3528,219 @@ DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rail
 DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_blog_posts_index_html_erb___1492947903317249540_2167888920 at /Users/dbaynes/UW/RailsWinterSpring2014/Blog-Post-App/app/views/blog_posts/index.html.erb:23)
   Rendered blog_posts/index.html.erb within layouts/application (3.4ms)
 Completed 200 OK in 8ms (Views: 6.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-01-28 15:33:08 -0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by BlogPostsController#index as HTML
+  [1m[35mBlogPost Load (0.4ms)[0m  SELECT "blog_posts".* FROM "blog_posts"
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_blog_posts_index_html_erb__458992234807014204_2161558320 at /Users/dbaynes/UW/RailsWinterSpring2014/blog-post-app/app/views/blog_posts/index.html.erb:23)
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_blog_posts_index_html_erb__458992234807014204_2161558320 at /Users/dbaynes/UW/RailsWinterSpring2014/blog-post-app/app/views/blog_posts/index.html.erb:23)
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_blog_posts_index_html_erb__458992234807014204_2161558320 at /Users/dbaynes/UW/RailsWinterSpring2014/blog-post-app/app/views/blog_posts/index.html.erb:23)
+  Rendered blog_posts/index.html.erb within layouts/application (77.8ms)
+Completed 200 OK in 691ms (Views: 674.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-01-28 15:33:09 -0800
+
+
+Started GET "/assets/blog_posts.css?body=1" for 127.0.0.1 at 2014-01-28 15:33:09 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-01-28 15:33:09 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-01-28 15:33:09 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-01-28 15:33:09 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-01-28 15:33:09 -0800
+
+
+Started GET "/assets/blog_posts.js?body=1" for 127.0.0.1 at 2014-01-28 15:33:09 -0800
+
+
+Started GET "/blog_posts/5-david-baynes/edit" for 127.0.0.1 at 2014-01-28 15:33:21 -0800
+Processing by BlogPostsController#edit as HTML
+  Parameters: {"id"=>"5-david-baynes"}
+@@@@@Edit!
+  [1m[36mBlogPost Load (0.3ms)[0m  [1mSELECT "blog_posts".* FROM "blog_posts" WHERE "blog_posts"."id" = ? LIMIT 1[0m  [["id", "5-david-baynes"]]
+  Rendered blog_posts/_form.html.erb (7.5ms)
+  Rendered blog_posts/edit.html.erb within layouts/application (10.7ms)
+Completed 200 OK in 17ms (Views: 14.1ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/blog_posts/5-david-baynes" for 127.0.0.1 at 2014-01-28 15:33:34 -0800
+Processing by BlogPostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"70j3N2ryVG4F4p0fnxIyHua9KlhctbuLEtGu+UrBx4g=", "blog_post"=>{"name"=>"David Baynes", "title"=>"Becoming a Coder Fellow", "content"=>"Means striving for excellence."}, "commit"=>"Update Post", "id"=>"5-david-baynes"}
+  [1m[35mBlogPost Load (0.1ms)[0m  SELECT "blog_posts".* FROM "blog_posts" WHERE "blog_posts"."id" = ? LIMIT 1  [["id", "5-david-baynes"]]
+@@@@@@UPDATE Name/CONTENT: David Baynes / Means striving for excellence.
+@@@@@@BLOG POST PARAMS!@
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (2.6ms)[0m  UPDATE "blog_posts" SET "title" = ?, "updated_at" = ? WHERE "blog_posts"."id" = 5  [["title", "Becoming a Coder Fellow"], ["updated_at", Tue, 28 Jan 2014 23:33:34 UTC +00:00]]
+  [1m[36m (2.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3002/blog_posts/5-david-baynes
+Completed 302 Found in 10ms (ActiveRecord: 4.8ms)
+
+
+Started GET "/blog_posts/5-david-baynes" for 127.0.0.1 at 2014-01-28 15:33:34 -0800
+Processing by BlogPostsController#show as HTML
+  Parameters: {"id"=>"5-david-baynes"}
+@@@@@SHOW!
+  [1m[35mBlogPost Load (0.1ms)[0m  SELECT "blog_posts".* FROM "blog_posts" WHERE "blog_posts"."id" = ? LIMIT 1  [["id", "5-david-baynes"]]
+  Rendered blog_posts/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-01-28 15:39:35 -0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by BlogPostsController#index as HTML
+  [1m[35mBlogPost Load (0.2ms)[0m  SELECT "blog_posts".* FROM "blog_posts"
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_blog_posts_index_html_erb__4475324681822918033_2198630020 at /Users/dbaynes/UW/RailsWinterSpring2014/blog-post-app/app/views/blog_posts/index.html.erb:23)
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_blog_posts_index_html_erb__4475324681822918033_2198630020 at /Users/dbaynes/UW/RailsWinterSpring2014/blog-post-app/app/views/blog_posts/index.html.erb:23)
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_blog_posts_index_html_erb__4475324681822918033_2198630020 at /Users/dbaynes/UW/RailsWinterSpring2014/blog-post-app/app/views/blog_posts/index.html.erb:23)
+  Rendered blog_posts/index.html.erb within layouts/application (73.3ms)
+Completed 200 OK in 112ms (Views: 95.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-01-28 15:39:35 -0800
+
+
+Started GET "/assets/blog_posts.css?body=1" for 127.0.0.1 at 2014-01-28 15:39:35 -0800
+
+
+Started GET "/assets/blog_posts.js?body=1" for 127.0.0.1 at 2014-01-28 15:39:35 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-01-28 15:39:35 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-01-28 15:39:35 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-01-28 15:39:35 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-01-28 15:39:35 -0800
+
+
+Started DELETE "/blog_posts/1-test-name" for 127.0.0.1 at 2014-01-28 15:39:39 -0800
+Processing by BlogPostsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"70j3N2ryVG4F4p0fnxIyHua9KlhctbuLEtGu+UrBx4g=", "id"=>"1-test-name"}
+  [1m[36mBlogPost Load (0.2ms)[0m  [1mSELECT "blog_posts".* FROM "blog_posts" WHERE "blog_posts"."id" = ? LIMIT 1[0m  [["id", "1-test-name"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (1.9ms)[0m  [1mDELETE FROM "blog_posts" WHERE "blog_posts"."id" = ?[0m  [["id", 1]]
+  [1m[35m (6.6ms)[0m  commit transaction
+Redirected to http://localhost:3000/blog_posts
+Completed 302 Found in 12ms (ActiveRecord: 8.8ms)
+
+
+Started GET "/blog_posts" for 127.0.0.1 at 2014-01-28 15:39:39 -0800
+Processing by BlogPostsController#index as HTML
+  [1m[36mBlogPost Load (0.1ms)[0m  [1mSELECT "blog_posts".* FROM "blog_posts"[0m
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_blog_posts_index_html_erb__4475324681822918033_2198630020 at /Users/dbaynes/UW/RailsWinterSpring2014/blog-post-app/app/views/blog_posts/index.html.erb:23)
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_blog_posts_index_html_erb__4475324681822918033_2198630020 at /Users/dbaynes/UW/RailsWinterSpring2014/blog-post-app/app/views/blog_posts/index.html.erb:23)
+  Rendered blog_posts/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 6ms (Views: 5.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-01-28 15:39:39 -0800
+
+
+Started GET "/assets/blog_posts.js?body=1" for 127.0.0.1 at 2014-01-28 15:39:39 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-01-28 15:39:39 -0800
+
+
+Started GET "/assets/blog_posts.css?body=1" for 127.0.0.1 at 2014-01-28 15:39:39 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-01-28 15:39:39 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-01-28 15:39:39 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-01-28 15:39:39 -0800
+
+
+Started DELETE "/blog_posts/2-test-name" for 127.0.0.1 at 2014-01-28 15:39:41 -0800
+Processing by BlogPostsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"70j3N2ryVG4F4p0fnxIyHua9KlhctbuLEtGu+UrBx4g=", "id"=>"2-test-name"}
+  [1m[35mBlogPost Load (0.1ms)[0m  SELECT "blog_posts".* FROM "blog_posts" WHERE "blog_posts"."id" = ? LIMIT 1  [["id", "2-test-name"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "blog_posts" WHERE "blog_posts"."id" = ?  [["id", 2]]
+  [1m[36m (6.5ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/blog_posts
+Completed 302 Found in 9ms (ActiveRecord: 6.9ms)
+
+
+Started GET "/blog_posts" for 127.0.0.1 at 2014-01-28 15:39:41 -0800
+Processing by BlogPostsController#index as HTML
+  [1m[35mBlogPost Load (0.1ms)[0m  SELECT "blog_posts".* FROM "blog_posts"
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_blog_posts_index_html_erb__4475324681822918033_2198630020 at /Users/dbaynes/UW/RailsWinterSpring2014/blog-post-app/app/views/blog_posts/index.html.erb:23)
+  Rendered blog_posts/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 5ms (Views: 4.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-01-28 15:39:41 -0800
+
+
+Started GET "/assets/blog_posts.css?body=1" for 127.0.0.1 at 2014-01-28 15:39:41 -0800
+
+
+Started GET "/assets/blog_posts.js?body=1" for 127.0.0.1 at 2014-01-28 15:39:41 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-01-28 15:39:41 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-01-28 15:39:41 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-01-28 15:39:41 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-01-28 15:39:41 -0800
+
+
+Started DELETE "/blog_posts/5-david-baynes" for 127.0.0.1 at 2014-01-28 15:39:43 -0800
+Processing by BlogPostsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"70j3N2ryVG4F4p0fnxIyHua9KlhctbuLEtGu+UrBx4g=", "id"=>"5-david-baynes"}
+  [1m[36mBlogPost Load (0.1ms)[0m  [1mSELECT "blog_posts".* FROM "blog_posts" WHERE "blog_posts"."id" = ? LIMIT 1[0m  [["id", "5-david-baynes"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "blog_posts" WHERE "blog_posts"."id" = ?[0m  [["id", 5]]
+  [1m[35m (6.8ms)[0m  commit transaction
+Redirected to http://localhost:3000/blog_posts
+Completed 302 Found in 9ms (ActiveRecord: 7.1ms)
+
+
+Started GET "/blog_posts" for 127.0.0.1 at 2014-01-28 15:39:43 -0800
+Processing by BlogPostsController#index as HTML
+  [1m[36mBlogPost Load (0.1ms)[0m  [1mSELECT "blog_posts".* FROM "blog_posts"[0m
+  Rendered blog_posts/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-01-28 15:39:43 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-01-28 15:39:43 -0800
+
+
+Started GET "/assets/blog_posts.css?body=1" for 127.0.0.1 at 2014-01-28 15:39:43 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-01-28 15:39:43 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-01-28 15:39:43 -0800
+
+
+Started GET "/assets/blog_posts.js?body=1" for 127.0.0.1 at 2014-01-28 15:39:43 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-01-28 15:39:43 -0800
